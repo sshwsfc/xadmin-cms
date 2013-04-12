@@ -1,8 +1,8 @@
 #coding:utf-8
-import exadmin
+import xadmin
 from django.db.models import TextField
-from exadmin import widgets
-from exadmin.views import BaseAdminPlugin, ModelFormAdminView, DetailAdminView
+from xadmin import widgets
+from xadmin.views import BaseAdminPlugin, ModelFormAdminView, DetailAdminView
 
 
 class WYSIHtml5Plugin(BaseAdminPlugin):
@@ -51,5 +51,5 @@ class WYSIHtml5Plugin(BaseAdminPlugin):
             media.add_js([self.static('xcms/ckeditor/ckeditor.js'),])
         return media
 
-exadmin.site.register_plugin(WYSIHtml5Plugin, DetailAdminView)
-exadmin.site.register_plugin(WYSIHtml5Plugin, ModelFormAdminView)
+xadmin.site.register_plugin(WYSIHtml5Plugin, DetailAdminView)
+xadmin.site.register_plugin(WYSIHtml5Plugin, ModelFormAdminView)

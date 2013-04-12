@@ -128,9 +128,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'exadmin',
+    'xadmin',
     'crispy_forms',
     'reversion',
+    
+    # plugin
+    'xcms',
     
     'app',
 )

@@ -1,7 +1,7 @@
 #coding:utf-8
-import exadmin
-from exadmin.layout import Fieldset, Field
-from exadmin.views.base import CommAdminView
+import xadmin
+from xadmin.layout import Fieldset, Field
+from xadmin.views.base import CommAdminView
 
 from models import Article, Category
 
@@ -10,7 +10,7 @@ class GolbeSetting(object):
     globe_models_icon = {
         Article: 'file', Category: 'cloud'
     }
-exadmin.site.register(CommAdminView, GolbeSetting)
+xadmin.site.register(CommAdminView, GolbeSetting)
 
 class ArticleAdmin(object):
     list_display = ('title', 'categories', 'date')
@@ -38,5 +38,5 @@ class CategoryAdmin(object):
     list_editable = ('name', )
     list_filter = ('parent', )
 
-exadmin.site.register(Article, ArticleAdmin)
-exadmin.site.register(Category, CategoryAdmin)
+xadmin.site.register(Article, ArticleAdmin)
+xadmin.site.register(Category, CategoryAdmin)

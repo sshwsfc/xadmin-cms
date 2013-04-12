@@ -1,12 +1,12 @@
 #coding:utf-8
-import exadmin
+import xadmin
 from django import forms
 from django.db.models import ManyToManyField
 from django.forms.util import flatatt
 from django.utils.encoding import force_unicode
 from django.utils.html import conditional_escape
 from django.utils.safestring import mark_safe
-from exadmin.views import BaseAdminPlugin, ModelFormAdminView
+from xadmin.views import BaseAdminPlugin, ModelFormAdminView
 
 
 class TreeCheckboxSelect(forms.CheckboxSelectMultiple):
@@ -105,4 +105,4 @@ class M2MTreePlugin(BaseAdminPlugin):
             media.add_js([self.static('xcms/js/jquery.jstree.js'), self.static('xcms/js/form_tree.js')])
         return media
 
-exadmin.site.register_plugin(M2MTreePlugin, ModelFormAdminView)
+xadmin.site.register_plugin(M2MTreePlugin, ModelFormAdminView)
