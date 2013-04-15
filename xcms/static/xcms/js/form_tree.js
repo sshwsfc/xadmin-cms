@@ -2,7 +2,7 @@
 
   $.fn.exform.renders.push(function(f){
     if($.fn.jstree){
-      f.find('.admin-tree').each(function(){
+      f.find('.admin-tree:not(.rended)').each(function(){
         var tree_input = $(this);
         var tree = tree_input.jstree({
           "plugins" : [ "themes", "html_data", "checkbox", "ui" ],
@@ -26,6 +26,7 @@
             data.inst.check_node(parent);
           }
         });
+        tree_input.addClass('rended');
       })
     }
   });
